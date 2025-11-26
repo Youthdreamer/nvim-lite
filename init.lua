@@ -21,7 +21,7 @@ vim.opt.shiftwidth = 2                          -- 缩进宽度为 2
 vim.opt.wrap = false                            -- 不自动换行
 vim.opt.scrolloff = 5                           -- 上下保留 5 行作为缓冲
 vim.opt.signcolumn = 'yes'                      -- 永远显示 sign column（诊断标记）
--- vim.opt.winborder = 'rounded'                   -- 窗口边框样式
+vim.opt.winborder = 'rounded'                   -- 窗口边框样式
 vim.opt.ignorecase = true                       -- 搜索忽略大小写
 vim.opt.smartcase = true                        -- 当包含大写字母时，搜索区分大小写
 vim.opt.hlsearch = false                        -- 搜索匹配不高亮
@@ -237,3 +237,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank({ timeout = 500 })
   end,
 })
+
