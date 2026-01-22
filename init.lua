@@ -153,8 +153,6 @@ end, { desc = "format" })
 vim.keymap.set({ "n", "v" }, "<leader>c", '"+y', { desc = "copy to system clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>x", '"+d', { desc = "cut to system clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "paste to system clipboard" })
--- 撤销
-vim.keymap.set({ "n", "v", "i" }, "<C-z>", "<ESC>u<CR>", { desc = "undo" })
 -- 窗口切换
 vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "focus windows" })
 -- 行移动
