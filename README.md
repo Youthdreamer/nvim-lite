@@ -8,11 +8,10 @@
 ### 📦 特性
 
 * ✅ **原生插件管理**：使用 Neovim 0.12 内置的 `vim.pack.add()`
-* 🎨 **经典主题**：`gruvbox`
-* ⚙️ **LSP 支持**：`mason.nvim` + `nvim-lspconfig`
+* 🎨 **使用0.12新增内置主题**：`catppuccin`
+* ⚙️ **LSP 支持**：`本机安装lsp` + `nvim-lspconfig`
 * 🪶 **轻量文件选择器 / 文件浏览器**：`mini.pick`、`mini.files`
-* 🌳 **语法高亮与折叠**：`nvim-treesitter`
-* 💬 **自动补全**：`blink.cmp`（懒加载）
+* 💬 **自动补全**：`blink.cmp`
 * 🔧 **实用快捷键**：保存、格式化、LSP 跳转、窗口移动、系统剪贴板等
 
 ---
@@ -42,8 +41,8 @@
 首次启动时，Neovim 会自动：
 
 * 下载并安装所有插件；
-* 初始化 Treesitter、LSP、文件浏览等功能；
-* 自动设置 `gruvbox` 主题。
+* 初始化 LSP、文件浏览等功能；
+* 自动设置 `catppuccin` 主题。
 
 ---
 
@@ -51,10 +50,7 @@
 
 | 插件                                                                                    | 功能        |
 | ------------------------------------------------------------------------------------- | --------- |
-| [morhetz/gruvbox](https://github.com/morhetz/gruvbox)                                 | 配色主题      |
-| [mason-org/mason.nvim](https://github.com/mason-org/mason.nvim)                       | LSP 安装管理器 |
 | [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)                     | LSP 配置    |
-| [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮与折叠   |
 | [nvim-mini/mini.pick](https://github.com/nvim-mini/mini.pick)                         | 文件/缓冲区搜索  |
 | [nvim-mini/mini.files](https://github.com/nvim-mini/mini.files)                       | 文件浏览器     |
 | [saghen/blink.cmp](https://github.com/saghen/blink.cmp)                               | 自动补全框架    |
@@ -73,7 +69,7 @@
 | 格式化       | `<leader>lf`    |
 | 跳转到定义     | `gd`            |
 | LSP 重命名   | `<leader>rn`    |
-| 打开诊断      | `<leader>dd`    |
+| 打开诊断      | `<leader>d`    |
 | 上一个/下一个诊断 | `[d` / `]d`     |
 | 移动行       | `Alt + j / k`   |
 | 系统剪贴板复制粘贴 | `<leader>c/x/p` |
@@ -83,7 +79,6 @@
 ### 🧰 自动加载逻辑
 
 * 插件通过 `vim.pack.add()` 注册
-* Treesitter 在首次打开文件时加载
 * `blink.cmp` 在第一次进入插入模式时加载
 * 主题配置在 `VimEnter` 时加载
 
